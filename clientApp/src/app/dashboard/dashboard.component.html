@@ -1,0 +1,68 @@
+<div class="container border_solid" style="height:13vw; overflow:hidden;">
+    <span style="margin:2vw; ">
+      <tr>
+          <h2  style="margin-top: 2vw !important;">{{dataJSON[0].Currency}}</h2>
+      </tr>
+      <tr>
+        <td><h3>Last Price : </h3></td> <td><h3>{{dataJSON[0].LastPrice}} </h3></td>
+      </tr>
+      <tr>
+          <td><h3>24hr Volume : </h3></td> <td><h3>{{dataJSON[0].Volume}} </h3></td>
+      </tr>
+    </span>
+    <span style="float:right; margin-right: 5vw;"><img src="../../assets/images/{{dataJSON[0].img}}" alt="Image" style="margin:-2vw; width:18vw;" ></span>
+</div>
+
+<div class="container border_solid">
+    <MARQUEE SCROLLDELAY=100 >
+    <div *ngFor="let data of dataJSON" style="width:15vw; margin:1vw; display:inline-block">
+        <div class="row">
+          <div class="col-md-5">
+              <img src="../../assets/images/{{data.img}}" alt="Image" style=" width:6vw;" >
+          </div>
+          <div class="col-md-7" style="text-align: right; line-height: 1vw;">
+              <p>{{data.Status}}</p>
+              <p>{{data.Currency | uppercase}}</p>
+              <p>{{data.Volume}}</p>
+              <p>{{data.Spread}}</p>
+          </div>
+        </div>
+      </div>
+    </MARQUEE>
+</div>
+
+<div class="container">
+    <span style="font-size: 2vw;">BITCOIN MARKETS</span>
+    <span style="float:right" ><input type="search"> </span>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th>Currency</th>
+            <th>Volume</th>
+            <th>Changes</th>
+            <th>Last Price</th>
+            <th>24HR High</th>
+            <th>24HR Low</th>
+            <th>Spread</th>
+            <th>Added</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let data of dataJSON'>
+            <td>{{data.Market}}</td>
+            <td>{{data.Currency}}</td>
+            <td>{{data.Volume}}</td>
+            <td>{{data.Changes}}</td>
+            <td>{{data.LastPrice}}</td>
+            <td>{{data.High}}</td>
+            <td>{{data.Low}}</td>
+            <td>{{data.Spread}}</td>
+            <td>{{data.Added}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

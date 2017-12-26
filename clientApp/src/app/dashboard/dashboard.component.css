@@ -1,0 +1,35 @@
+
+.container{
+    width: 80%;
+    margin-top: 1vw;
+    padding:0px;
+}
+
+.border_solid{
+    border: solid 1px gainsboro;
+    box-shadow: 5px 5px 8px gainsboro; 
+}
+
+tr:hover {
+  background-color: gray !important;
+}
+table{
+    border:1px solid gainsboro;
+}
+
+th{
+    border:1px solid gainsboro;
+}
+
+td{
+    padding:0.3vw !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: antiquewhite;
+}
+
+h1, h2 {
+    margin-top:0vw !important;
+    font-weight: 1000;
+}

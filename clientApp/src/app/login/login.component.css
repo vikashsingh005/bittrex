@@ -1,0 +1,24 @@
+#login{
+    margin:auto;
+    overflow: hidden;
+    border-radius: 1vw;
+    border: 1px solid gainsboro;
+    width:30%;
+    padding:2vw;
+    box-shadow: 5px 5px 8px gainsboro; 
+   
+}
+
+input[type="email"], input[type="password"]{
+    width:24vw;
+}
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#logo-image{
+    width:16vw;
+    height:3.5vw;
+} 
